@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profile Page</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <nav>
+            <div class="menu-mobile">
+                <a href="#">Menu</a>
+            </div>
+            <ul>
+                <li><a href="a">HOME</a></li>
+                <li><a href="a">PRODUCT</a></li>
+                <li><a href="a">GALLERY</a></li>
+                <li><a href="a">NEWS</a></li>
+                <li><a href="a">MY INVENTORY</a></li>
+            </ul>
+        </nav>
+<div id="pageOne">
+        <section id="box-profile">
+            <div class="img-profile">
+               <div class="photo" style="background-image:
+               url(assets/img/poto.png);"></div>
+            </div>
+            <div class="description">
+                <h1 id="pName">Zethya Sahrul</h1>
+                <p id="pRole">Front End Designer</p>
+                <a href="#input-form" class="button bg-green" onclick="editForm()">Edit</a>
+                <a href="#" class="button border-blue">Resume</a>
+            </div>
+            <div class="information">
+                <div class="data">
+                    <p class="field">Availability</p>
+                    <p id="pAvailable" class="text-gray">Full Time</p>
+                </div>
+                <div class="data">
+                    <p class="field">Age</p>
+                    <p id="pAge" class="text-gray">17</p>
+                </div>
+                <div class="data">
+                    <p class="field">Location</p>
+                    <p id="pLocation" class="text-gray">Jakarta, Indonesia</p>
+                </div>
+                <div class="data">
+                    <p class="field">Years Experience</p>
+                    <p id="pExperience" class="text-gray">6</p>
+                </div>
+                <div class="data">
+                    <p class="field">Email</p>
+                    <p id="pEmail" class="text-gray">sahrul.r.dhani@gmail.com</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="pageTwo">
+        <section>
+            <form method="#" action="#">
+                <div>
+                    <label>Name</label>
+                    <input id="inpName" type="text" name="name">
+                </div>
+                <div>
+                    <label>Role</label>
+                    <input id="inpRole" type="text" name="role">
+                </div>
+                <div>
+                    <label>Availability</label>
+                    <input id="inpAvailability" type="text" name="availability">
+                </div>
+                <div>
+                    <label>Age</label>
+                    <input id="inpAge" type="number" name="age">
+                </div>
+                <div>
+                    <label>Location</label>
+                    <input id="inpLocation" type="text" name="location">
+                </div>
+                <div>
+                    <label>Years</label>
+                    <input id="inpYears" type="number" name="years">
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input id="inpEmail" type="email" name="email">
+                </div>
+                <div>
+                    <input class="button bg-green" onclick="simpanFor();return false;" type="submit" name="submit" value="SUBMIT" class="bg-blue">
+                </div>
+            </form>
+        </section>
+    </div>
+
+
+        <script type ="text/javascript">
+          //  var formMenu = document.getElementById("input-form");
+          //  formMenu.style.display = "none";
+
+            var pageOne = document.getElementById("pageOne");
+            var pageTwo = document.getElementById("pageTwo");
+
+            pageTwo.style.display="none";
+
+            function showMenu(){
+                var menu = document.getElementById("menu");
+                var box = document.getElementById("box-profile");
+
+                if(menu.style.display --- "black"){
+                    menu.style.display = "none";
+                    box.style.paddingTop = "0px";
+
+                }else{
+                    menu.style.display = "black";
+                    box.style.paddingTop = "125px";
+
+                }
+            }
+            function editForm(){
+                pageTwo.style.display="block";
+                pageOne.style.display="none";
+            }
+            function simpanFor(){
+                pageTwo.style.display="none";
+                pageOne.style.display="block";
+            }
+
+        </script>
+    </body>
+</html>
